@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Cleaning Services of San Diego | Professional Window Washers</title>
+    <meta name="description" content="Professional window cleaning, pressure washing, and gutter cleaning services in San Diego County. Family-owned with 5-star reviews since 2014.">
+    <meta name="keywords" content="window cleaning san diego, pressure washing, gutter cleaning, screen repair, roof cleaning, professional window washers">
+    <meta name="author" content="Nathan Bradbury">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #F48847;
+            --dark: #282D30;
+            --light: #FFFFFF;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #e37a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Hero Section with Parallax */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-image: url('i/houese-bluesky.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: var(--light);
+            max-width: 800px;
+            padding: 2rem;
+            background-color: rgba(40, 45, 48, 0.7);
+            border-radius: 8px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose {
+            background-color: var(--light);
+            color: var(--text-dark);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--dark);
+            color: var(--text-light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        
+        .stars {
+            color: #FFD700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            text-align: right;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--dark);
+            color: var(--text-light);
+            position: relative;
+        }
+        
+        .contact-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('i/light-shadow-window.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+        
+        /* Reviews Section */
+        .reviews {
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .reviews-grid {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .review-platform {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: transform 0.3s ease;
+        }
+        
+        .review-platform:hover {
+            transform: translateY(-5px);
+        }
+        
+        .review-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f9f9f9;
+            font-size: 3rem;
+        }
+        
+        .review-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .review-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .services-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reviews-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Window Cleaning Services of San Diego</h1>
+            <p>Your Go To Cleaning Specialists for San Diego County</p>
+            <a href="mailto:sdcleanwindows@gmail.com?subject=WCS%20Services%20Estimate&body=I'd%20like%20to%20get%20an%20estimate%20for%20your%20services.%20Below%20are%20the%20details%20needed.%20(Please%20accurately%20fill%20in%20the%20information%20below.%20This%20way%20we%20can%20provide%20the%20most%20accurate%20estimate)%0A%0AAddress%20(Where%20in%20San%20Diego%20is%20ok):%0A%0AType%20of%20Service:%0A%0ASquare%20Footage:%0A%0ASingle%20level/Double%20level%20etc.:%0A%0APlease%20tell%20us%20any%20other%20necessary%20details:" class="btn">Get A Quote</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose Window Cleaning Services of San Diego?</h2>
+            <p>Since our founding in 2014, we've been San Diego's trusted window cleaning experts. As a family-owned and operated business, we believe that success comes from treating every customer with kindness, respect, and delivering exceptional service that exceeds expectations.</p>
+            <p>At Window Cleaning Services of San Diego, we combine old-fashioned work ethic with modern cleaning techniques. Each member of our team is hard-working, honest, and dedicated to making your windows sparkle. We take pride in our 5-star reviews and strive to maintain our reputation as San Diego's premier window cleaning service.</p>
+            <p>When you choose us, you're supporting a local San Diego business that cares about our community and stands behind every job we complete. We're fully insured and committed to your complete satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="i/clean-window-arm.jpg" alt="Professional Window Cleaning in San Diego">
+                    </div>
+                    <div class="service-content">
+                        <h3>Window Cleaning</h3>
+                        <p>Crystal clear results for both residential and commercial properties throughout San Diego County.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="i/pressure-washer.jpg" alt="Pressure Washing Services in San Diego">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pressure Washing</h3>
+                        <p>Remove dirt, grime, and mildew from your home's exterior surfaces with our professional pressure washing.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="i/side-home.jpg" alt="Gutter Cleaning Services in San Diego">
+                    </div>
+                    <div class="service-content">
+                        <h3>Gutter Cleaning</h3>
+                        <p>Keep your gutters flowing freely and protect your home from water damage with our thorough cleaning service.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="i/sun-screen.jpg" alt="Screen Repair Services in San Diego">
+                    </div>
+                    <div class="service-content">
+                        <h3>Screen Repair</h3>
+                        <p>Fix or replace damaged window and door screens to keep insects out while letting fresh air in.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="i/tile-roof.jpg" alt="Roof Cleaning Services in San Diego">
+                    </div>
+                    <div class="service-content">
+                        <h3>Roof Cleaning</h3>
+                        <p>Safely remove moss, algae, and stains from your roof to extend its life and improve curb appeal.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="I/solar-panels.jpg" alt="Solar Panel cleaning in San Diego">
+                    </div>
+                    <div class="service-content">
+                        <h3>Panel Cleaning</h3>
+                        <p>Maximize the energy generated with clean and debris free solar panels and ensure optimal performance.</p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="mailto:sdcleanwindows@gmail.com?subject=WCS%20Services%20Estimate&body=I'd%20like%20to%20get%20an%20estimate%20for%20your%20services.%20Below%20are%20the%20details%20needed.%20(Please%20accurately%20fill%20in%20the%20information%20below.%20This%20way%20we%20can%20provide%20the%20most%20accurate%20estimate)%0A%0AAddress%20(Where%20in%20San%20Diego%20is%20ok):%0A%0AType%20of%20Service:%0A%0ASquare%20Footage:%0A%0ASingle%20level/Double%20level%20etc.:%0A%0APlease%20tell%20us%20any%20other%20necessary%20details:" class="btn">Get A Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"2 years after the COVID started I called Windows Cleaning Services again. The owner changed in the meanwhile but the service is still excellent! They have been very accommodating with my requests and very meticulous with the cleaning. They washed both the inside and the outside of the windows and the screens as well. I will call them again and I highly recommend him!"</p>
+                    <p class="testimonial-author">— Daniella D.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Very Nice Gentleman !! Did a Great Job, Interior & Exterior !! Reasonable Price !! Highly recommend !!!!"</p>
+                    <p class="testimonial-author">— Leon S.</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Excellent service! Reasonable pricing. Responded right away to schedule appointment. Did a thorough job of cleaning 2-story house windows and completed sooner than expected. Friendly & professional. Highly recommend!"</p>
+                    <p class="testimonial-author">— Dee G.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Awesome window cleaner. Nathan is really detailed and is easy to work with. Scheduling was quick as well. Five stars!"</p>
+                    <p class="testimonial-author">— Tyler T.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Arrives on time. Windows, screens, etc are thoroughly cleaned in a logical order to ensure the rest of your home stays clean. They even took pictures to show the before and after of our solar panels."</p>
+                    <p class="testimonial-author">— Merr B.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Very Nice Gentleman !! Did a Great Job, Interior & Exterior !! Reasonable Price !! Highly recommend!!!!"</p>
+                    <p class="testimonial-author">— Leon S.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-bg"></div>
+        <div class="container">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>We’re happy to assist you in obtaining a straightforward and prompt over-the-phone quote. Alternatively, you can conveniently email us the specifics of the work you’d like us to undertake. We’ll promptly reach out to you.</p>
+                
+                <div class="contact-info">
+                    <p><a href="tel:616-405-4615" style="color: var(--light);">(616) 405-4615</a></p>
+                </div>
+                
+                <a href="mailto:sdcleanwindows@gmail.com?subject=WCS%20Services%20Estimate&body=I'd%20like%20to%20get%20an%20estimate%20for%20your%20services.%20Below%20are%20the%20details%20needed.%20(Please%20accurately%20fill%20in%20the%20information%20below.%20This%20way%20we%20can%20provide%20the%20most%20accurate%20estimate)%0A%0AAddress%20(Where%20in%20San%20Diego%20is%20ok):%0A%0AType%20of%20Service:%0A%0ASquare%20Footage:%0A%0ASingle%20level/Double%20level%20etc.:%0A%0APlease%20tell%20us%20any%20other%20necessary%20details:" class="btn">Get A Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2>Find Us On These Platforms</h2>
+            
+            <div class="reviews-grid">
+                <a href="https://maps.app.goo.gl/RWQQFhF6CvhhKuyP7" class="review-platform" target="_blank">
+                    <div class="review-img">
+                        <img src="i/google-1-logo.png" alt="Google Reviews">
+                    </div>
+                    <p>Google Reviews</p>
+                </a>
+                
+                <a href="https://www.yelp.com/biz/window-cleaning-services-of-san-diego-vista-5?osq=window+cleaning+services+of+San+Diego&override_cta=Get+pricing" class="review-platform" target="_blank">
+                    <div class="review-img">
+                        <img src="i/yelp_burst.png" alt="Yelp Reviews">
+                    </div>
+                    <p>Yelp Reviews</p>
+                </a>
+            </div>
+            
+            <p>Love our service? Leave us a review!
+            <a href="https://www.google.com/maps/place/Window+Cleaning+Services+of+San+Diego/@33.0110782,-117.9455072,167235m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80dbfa499230b55d:0x5e36d9638a395c6b!8m2!3d33.0128119!4d-117.286085!16s%2Fg%2F11b8t73xkq?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" class="review-link" target="_blank">Leave a Google Review</a></p>
+
+<p><strong>Copyright © 2025 | Window Cleaning Services of San Diego | Website by <a href="https://joelprice.com" class="review-link" target="_blank">joelprice.com</a></strong></p>
+
+        </div>
+    </section>
+
+    <script>
+        // Simple parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const heroBg = document.querySelector('.hero-bg');
+            heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
